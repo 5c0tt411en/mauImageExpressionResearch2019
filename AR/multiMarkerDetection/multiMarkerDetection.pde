@@ -1,33 +1,32 @@
 import processing.video.*;
 import jp.nyatla.nyar4psg.*;
 
-Capture cam;
+Capture cap;
 MultiMarker nya;
 int idNum = 10;
 
 void setup() {
     size(640, 480, P3D);
-    println(MultiMarker.VERSION);
-    cam=new Capture(this, 640, 480);
+    cap=new Capture(this, 640, 480);
     nya=new MultiMarker(this, width, height, "camera_para.dat", NyAR4PsgConfig.CONFIG_PSG);
     for (int i = 0; i < idNum; i++) {
         nya.addNyIdMarker(i, 60);
     }
-    cam.start();
+    cap.start();
 }
 
 void draw()
 {
-    if (cam.available()) {
-        cam.read();
+    if (cap.available()) {
+        cap.read();
     }
-    nya.detect(cam);
+    nya.detect(cap);
     background(0);
-    nya.drawBackground(cam);
+    nya.drawBackground(cap);
     for (int i = 0; i < idNum; i++) {
         if (nya.isExist(i)) {
             nya.beginTransform(i);
-            rect(-40, -40, 80, 80);
+            rect(-30, -30, 60, 60);
             fill(0, 0, 255);
             nya.endTransform();
         }

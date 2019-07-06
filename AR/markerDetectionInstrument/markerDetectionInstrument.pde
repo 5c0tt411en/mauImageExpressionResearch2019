@@ -12,7 +12,6 @@ float amp = 0., freq = 500.;
 
 void setup() {
     size(640, 480, P3D);
-    println(MultiMarker.VERSION);
     cap=new Capture(this, 640, 480);
     nya=new MultiMarker(this, width, height, "camera_para.dat", NyAR4PsgConfig.CONFIG_PSG);
     for (int i = 0; i < idNum; i++) {

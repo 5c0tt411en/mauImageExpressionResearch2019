@@ -11,7 +11,7 @@ class Particle {
         y = _y;
         vx = _vx;
         vy = _vy;
-        d = int(_d);
+        d = _d;
         age = 0;
         life = int(random(10, 20));
     }
