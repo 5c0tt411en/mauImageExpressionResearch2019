@@ -29,5 +29,11 @@
 ### AR/markerDetectionInstrument
 ![markerDetectionInstrument](images/markerDetectionInstrument.png)
 
+### time/timeStamp2
+![timeStamp2](images/timeStamp2.png)
+
+### time/exp
+![exp](images/exp.png)
+
 ### projection/keyStone
 ![keyStone](images/keyStone.png)
